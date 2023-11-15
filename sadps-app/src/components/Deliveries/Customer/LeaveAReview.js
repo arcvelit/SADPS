@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Style/Review.css'
 
 function LeaveAReview()
 {
@@ -14,7 +15,8 @@ function LeaveAReview()
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='review-container'>
+    <form className='review-form' onSubmit={handleSubmit}>
       <label>
         Email:
         <input
@@ -55,6 +57,7 @@ function LeaveAReview()
       <br />
       <button type="submit">Submit Review</button>
     </form>
+    </div>
   );
 };
 
