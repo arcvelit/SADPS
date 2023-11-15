@@ -7,7 +7,7 @@ const TrackingPage = () => {
 
  const mockData = [
     { trackingNumber: 'SADPS-123', status: 'Delivered', location: 'New York, NY' },
-    { trackingNumber: 'SADPS-456', status: 'In Transit', location: 'Los Angeles, CA' },
+    { trackingNumber: 'SADPS-456', status: 'In Transit', location: 'Montreal, QC' },
     { trackingNumber: 'SADPS-789', status: 'Delivered', location: 'Chicago, IL' },
  ];
 
