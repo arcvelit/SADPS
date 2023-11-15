@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Style/Tracking.css'
 
 function GetTrackingUpdates(){
 const [trackingNumber, setTrackingNumber] = useState('');
@@ -24,18 +25,25 @@ const handleSubmit = (e) => {
 };
 
 return (
-   <div>
-     <form onSubmit={handleSubmit}>
-       <label>
-         Tracking Number:
-         <input type="text" value={trackingNumber} onChange={e => setTrackingNumber(e.target.value)} />
-       </label>
-       <button type="submit">Track</button>
-     </form>
+   <div className='container'>
+    <div className='tracking-form'>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Tracking Number:
+          <input type="text" value={trackingNumber} onChange={e => setTrackingNumber(e.target.value)} />
+        </label>
+        <button type="submit">Track</button>
+        <button type="button" >Add</button>
+      </form>
+    </div>
      {status && (
-       <div>
-         <h3>Status: {status}</h3>
-         {location && <p>Location: {location}</p>}
+       <div className='status-box'>
+          <div className='status-collection'>
+            <div className='status'>
+              <h3>Status: {status}</h3>
+              {location && <p>Location: {location}</p>}
+            </div>
+          </div>
        </div>
      )}
    </div>
