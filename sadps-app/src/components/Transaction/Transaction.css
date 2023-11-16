@@ -78,7 +78,7 @@ body {
 }
 
 .transaction-container .checkout-container .button-container {
-    text-align: right;
+    display: flex;
 }
 
 .transaction-container .delivery-info-container {
@@ -108,4 +108,8 @@ body {
 
 .transaction-container .transaction-summary-container .final-total-container {
     text-align: right;
+}
+
+.transaction-container .button-container .update-button {
+    margin-right: auto;
 }
