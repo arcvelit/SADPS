@@ -1,0 +1,115 @@
+body {
+    height: 100vh;
+}
+
+#root {
+    height: 100vh;
+}
+
+.transaction-container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.transaction-container .contact-info-container {
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    border-right: 1px solid rgb(124, 118, 118);
+}
+
+.transaction-container .contact-info-container .left-align-headers {
+    text-align: left;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-container .contact-info-container .input-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.transaction-container .contact-info-container .email-checkbox {
+    display: flex;
+    width: 100%;
+}
+
+.transaction-container .contact-info-container .email-checkbox label {
+    width: 41%;
+}
+
+.transaction-container .contact-info-container .email-checkbox input {
+    height: 15px;
+    width: 15px;
+}
+
+.transaction-container .transaction-summary-container {
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    background-color: whitesmoke;
+}
+
+.transaction-container .checkout-container .checkout-form .row-inputs {
+    display: flex;
+    flex-direction: row;
+}
+
+.transaction-container .checkout-container .checkout-form .first-name-input {
+    margin-right: 1rem;
+}
+
+.transaction-container .checkout-container .checkout-form .state-input {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.transaction-container .checkout-container .button-container {
+    display: flex;
+}
+
+.transaction-container .delivery-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 2rem;
+}
+
+.transaction-container .delivery-info-container p {
+    margin-left: 2rem;
+}
+
+.transaction-container .transaction-summary-container .parcel-img {
+    height: 80px;
+    width: 80px;
+    margin-left: auto;
+}
+
+.transaction-container .transaction-summary-container .del-request {
+    margin-right: auto;
+}
+
+.transaction-container .transaction-summary-container .sub-total-container {
+    text-align: right;
+}
+
+.transaction-container .transaction-summary-container .final-total-container {
+    text-align: right;
+}
+
+.transaction-container .button-container .update-button {
+    margin-right: auto;
+}

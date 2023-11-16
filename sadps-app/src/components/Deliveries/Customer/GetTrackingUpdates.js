@@ -26,7 +26,10 @@ const handleSubmit = (e) => {
 
 return (
    <div className='container'>
+          <h1>Track your packages</h1>
+
     <div className='tracking-form'>
+      
       <form onSubmit={handleSubmit}>
         <label>
           Tracking Number:
