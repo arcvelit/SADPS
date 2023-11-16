@@ -1,6 +1,6 @@
 import React from 'react';
 import './Transaction.css';
-import parcel from './stockparcel.webp';
+import parcel from './stockparcel.png';
 import { useTransactionDetails } from './hooks';
 import { useLocation } from 'react-router-dom';
 

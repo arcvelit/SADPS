@@ -32,9 +32,6 @@ function NavigationBar()
                             <Link to="/make-delivery-request" style={STYLE_LINK_DROPDOWN}>New delivery request</Link>
                         </li>
                         <li>
-                            <Link to="/generate-quotation-proposal" style={STYLE_LINK_DROPDOWN}>New quotation proposal</Link>
-                        </li>
-                        <li>
                             <Link to="/get-tracking-updates" style={STYLE_LINK_DROPDOWN}>Track a delivery</Link>
                         </li>
                         <li>

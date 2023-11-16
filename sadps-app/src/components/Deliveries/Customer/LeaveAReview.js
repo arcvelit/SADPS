@@ -16,6 +16,7 @@ function LeaveAReview()
 
   return (
     <div className='review-container'>
+      <h1>Leave your review</h1>
     <form className='review-form' onSubmit={handleSubmit}>
       <label>
         Email:
