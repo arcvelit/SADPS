@@ -14,6 +14,9 @@ function NavigationBar()
         <li>
             <Link to="/" style={STYLE_LINK_NAVBAR}>Home</Link>
         </li>
+        <li>
+            <Link to="/transaction" style={STYLE_LINK_NAVBAR}>Transaction</Link>
+        </li>
         <div className='dropdown'>
             <button className='dropbtn'>Services</button>
                 <div className='dropdown-content'>
