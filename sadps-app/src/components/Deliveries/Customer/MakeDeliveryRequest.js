@@ -13,6 +13,14 @@ function MakeDeliveryRequest()
     phoneNumber: '',
  });
 
+ const [packageDetails, setPackageDetails] = useState({
+  description: '',
+  weight: '',
+  height: '',
+  length: '',
+  width: '',
+});
+
  const [dropoff, setDropoff] = useState({
     name: '',
     address: '',
@@ -34,10 +42,12 @@ function MakeDeliveryRequest()
  };
 
  return (
-    <div>
+    <div className='del-req-container'>
       <h1>New Delivery Request</h1>
       <form onSubmit={handleSubmit}>
-        <h2>Pickup Details</h2>
+        <div className='delivery-request-boxes'>
+        <div className='pickup-form'>
+        <h2>Pickup details</h2>
         <label>
           Name:
           <input
@@ -83,7 +93,9 @@ function MakeDeliveryRequest()
             onChange={e => handleChange(e, setPickup)}
           />
         </label>
-        <h2>Drop off Details</h2>
+        </div>
+        <div className='dropoff-form'>
+        <h2>Drop off details</h2>
         <label>
           Name:
           <input
@@ -129,6 +141,56 @@ function MakeDeliveryRequest()
             onChange={e => handleChange(e, setDropoff)}
           />
         </label>
+        </div>
+        <div className='package-details-form'>
+        <h2>Package details</h2>
+        <label>
+          Description:
+          <input
+            type="text"
+            name="description"
+            value={packageDetails.description}
+            onChange={e => handleChange(e, setPackageDetails)}
+          />
+        </label>
+        <label>
+          Weight:
+          <input
+            type="text"
+            name="weight"
+            value={packageDetails.weight}
+            onChange={e => handleChange(e, setPackageDetails)}
+          />
+        </label>
+        <label>
+          Height:
+          <input
+            type="text"
+            name="height"
+            value={packageDetails.height}
+            onChange={e => handleChange(e, setPackageDetails)}
+          />
+        </label>
+        <label>
+          Length:
+          <input
+            type="text"
+            name="length"
+            value={packageDetails.length}
+            onChange={e => handleChange(e, packageDetails)}
+          />
+        </label>
+        <label>
+          Width:
+          <input
+            type="text"
+            name="width"
+            value={packageDetails.width}
+            onChange={e => handleChange(e, packageDetails)}
+          />
+        </label>
+        </div>
+        </div>
         <button type="submit">Submit</button>
       </form>
     </div>
