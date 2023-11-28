@@ -70,3 +70,8 @@
   .status p {
     margin: 0; /* Remove default margin on p */
   }
+
+  .map-container {
+    height: 500px;
+    width: 500px;
+   }
