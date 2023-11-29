@@ -1,0 +1,137 @@
+/* Global styles (if any) */
+
+.outer-container {
+    text-align: center;
+  }
+  
+  .payment-container {
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .split-container {
+    display: flex;
+  }
+  
+  .left-container,
+  .right-container {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .left-container {
+    border-right: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .payment-result {
+    margin-top: 20px;
+  }
+  
+  .payment-result p {
+    margin: 5px 0;
+  }
+  
+  .payment-form button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .payment-form button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+  
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .transaction-summary {
+    margin-bottom: 20px;
+  }
+  
+  .transaction-summary img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  
+  .transaction-summary h2 {
+    margin-bottom: 10px;
+  }
+  
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .paypal-button {
+    background-color: #003087; /* PayPal Blue color */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .paypal-button {
+    background-color: #003087; /* PayPal Blue color */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .paypal-button:hover {
+    background-color: #003daf; /* PayPal Blue color */
+
+  }
+  
+  .payment-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align buttons vertically centered */
+  margin-top: 20px;
+}
+
+    .crypto-button {
+        background-color: #FF9900;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .crypto-button:hover {
+        background-color: #ffa723;
+    }
+
+
+    .react-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
