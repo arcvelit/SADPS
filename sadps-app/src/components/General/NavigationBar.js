@@ -39,6 +39,14 @@ function NavigationBar()
                         </li>
                     </div>
             </div>
+            <div className='dropdown'>
+                <button className='dropbtn'>Help</button>
+                <div className='dropdown-content'>
+                    <li>
+                        <Link to="/customer-support" style={STYLE_LINK_DROPDOWN}>Customer Support</Link>
+                    </li>
+                </div>
+            </div>
         </div>  
     );
 }
