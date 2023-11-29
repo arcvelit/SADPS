@@ -139,7 +139,7 @@ const ContactSupport = () => {
         <ul>
           {faqs.map((faq, index) => (
             <li key={index}>
-              <strong>{faq.title}</strong> - {faq.date}
+              <strong>{faq.title}</strong> ({faq.date})
             </li>
           ))}
         </ul>

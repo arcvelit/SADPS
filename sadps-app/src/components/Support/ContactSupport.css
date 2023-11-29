@@ -100,3 +100,20 @@
     border: 1px solid #ccc;
     margin-bottom: 10px;
   }
+
+  .right-pane li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #0366d6; /* Change the color to your preference */
+    text-decoration: none; /* Remove underline */
+    list-style-type: none; /* Remove the default list bullet points */
+  }
+  
+  .right-pane li:hover {
+    color: #032f5d; /* Change the color to your preference */
+    text-decoration: underline;
+  }
+  
+  .right-pane li::before {
+    content: ''; /* No content, effectively removing the bullet point */
+  }
