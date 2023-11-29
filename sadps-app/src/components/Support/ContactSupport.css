@@ -1,0 +1,102 @@
+/* ContactSupport.css */
+
+.contact-support-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .left-pane,
+  .middle-pane,
+  .right-pane {
+    width: 30%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box-shadow for a subtle shadow effect */
+  }
+  
+  .middle-pane form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .middle-pane label {
+    margin-bottom: 10px;
+  }
+  
+  .middle-pane select,
+  .middle-pane textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .middle-pane textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px; /* Adjust the height to your preference */
+  }
+  
+  .middle-pane button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .middle-pane button:hover {
+    background-color: #0056b3;
+  }
+  
+  .left-pane ul,
+  .right-pane ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .left-pane li,
+  .right-pane li {
+    margin-bottom: 10px;
+  }
+  
+  /* ContactSupport.css */
+
+.left-pane {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Add overflow-y for scrolling if there are many tickets */
+}
+
+.ticket-card {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.ticket-card:hover {
+  background-color: #f9f9f9;
+}
+
+  
+  .ticket-logo {
+    max-width: 50px; /* Adjust the maximum width as needed */
+    max-height: 50px; /* Adjust the maximum height as needed */
+  }
+
+
+  .ticket-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }

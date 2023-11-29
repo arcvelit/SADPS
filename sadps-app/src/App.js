@@ -9,6 +9,7 @@ import GetTrackingUpdates from './components/Deliveries/Customer/GetTrackingUpda
 import Transaction from './components/Transaction/Transaction';
 import MakePayment from './components/Transaction/MakePayment';
 import Error505 from './components/Home/505';
+import ContactSupport from './components/Support/ContactSupport'
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/make-delivery-request" Component={MakeDeliveryRequest}/>
         <Route path="/transaction" Component={Transaction}/>
         <Route path="/" Component={Home}/>
-
+        <Route path="/customer-support" Component={ContactSupport}/>
         <Route path="/payment" Component={MakePayment}/>
 
       <Route path="*" Component={Error505}/>
