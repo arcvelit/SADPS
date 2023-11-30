@@ -1,72 +1,105 @@
-.container {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .tracking-form {
-    width: 75%;
-    background-color: #f9f9f9;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
 
-  .tracking-form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .tracking-form input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-
-  .tracking-form button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 15px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #2980b9; /* Change the background color on hover */
-  }
-
-  .status-box {
-    background-color: #f9f9f9;
-    padding: 20px;
-    width: 50%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: flex-start; /* Align items to the start (left) */
-  }
-  
-  .status-collection {
-    display: block;
-    flex-direction: column;
-  }
-  
-  .status {
-    text-align: left; /* Align text within the status to the left */
-    margin-bottom: 10px; /* Add margin between each status item */
-  }
-  
-  /* Additional styling for better presentation */
-  .status h3 {
-    margin: 0; /* Remove default margin on h3 */
-  }
-  
-  .status p {
-    margin: 0; /* Remove default margin on p */
-  }
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1;
+  min-height: 100vh; 
+ }
+ 
+ .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-height: 100vh; 
+ }
+ 
+ 
+ h1 {
+  margin-bottom: 20px;
+ }
+ 
+ /* Tracking Form Styles */
+ .tracking-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .tracking-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #2c3e50;
+ }
+ 
+ .tracking-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+ }
+ 
+ .tracking-form button {
+  background-color: #2980b9;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+ }
+ 
+ .tracking-form button:hover {
+  background-color: #3498db;
+ }
+ 
+ /* Status Box Styles */
+ .status-box {
+  background-color: #ecf0f1;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+ }
+ 
+ .status h3,
+ .status p {
+  margin: 0;
+  color: #2c3e50;
+ }
+ 
+ /* Additional Styles */
+ .status-description {
+  font-size: 14px;
+  margin-top: 10px;
+ }
+ 
+ .status-collection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ }
+ .footer {
+  width: 100%; 
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #2c3e50;
+ }
