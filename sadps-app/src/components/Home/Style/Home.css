@@ -1,13 +1,221 @@
-.home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.div {
+  background-color: #99d5fd;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 45px 50px;
+}
+@media (max-width: 991px) {
+  .div {
+    padding: 0 20px;
   }
-
-  .home-container img
-  {
+}
+.div-2 {
+  display: flex;
+  margin-top: 169px;
+  padding-right: 24px;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .div-2 {
     max-width: 100%;
-    max-height: 100%;
-    display: block; /* Ensure the image is treated as a block element */
-    margin: auto; /* Center the image within its parent */
+    flex-wrap: wrap;
+    padding-right: 20px;
+    margin-top: 40px;
   }
+}
+.div-3 {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0%;
+  flex-direction: column;
+}
+@media (max-width: 991px) {
+  .div-3 {
+    max-width: 100%;
+  }
+}
+.div-4 {
+  gap: 20px;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .div-4 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0px;
+}
+@media (max-width: 991px) {
+  .column {
+    width: 100%;
+  }
+}
+.div-5 {
+  color: #000;
+  letter-spacing: 0.96px;
+  font: 900 69px Ubuntu, -apple-system, Roboto, Helvetica,
+  sans-serif;
+}
+@media (max-width: 991px) {
+  .div-5 {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column-2 {
+    width: 100%;
+  }
+}
+.img {
+  border-radius: 25px;
+  aspect-ratio: 2.07;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  margin-top: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  overflow: hidden;
+}
+.div-6 {
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.96px;
+  margin-top: 61px;
+  font: 400 32px/44px Ubuntu, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-6 {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+.div-7 {
+  align-self: start;
+  width: 438px;
+  max-width: 100%;
+  margin: 46px 0 35px 13px;
+}
+@media (max-width: 991px) {
+  .div-7 {
+    margin-top: 40px;
+  }
+}
+.div-8 {
+  gap: 20px;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .div-8 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+.column-3 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 68%;
+  margin-left: 0px;
+}
+@media (max-width: 991px) {
+  .column-3 {
+    width: 100%;
+  }
+}
+.div-9 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+@media (max-width: 991px) {
+  .div-9 {
+    margin-top: 40px;
+  }
+}
+.div-10 {
+  color: #000;
+  letter-spacing: 1.44px;
+  white-space: nowrap;
+  font: 400 24px Ubuntu, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-10 {
+    white-space: initial;
+  }
+}
+.div-11 {
+  color: #000;
+  margin-top: 34px;
+  white-space: nowrap;
+  font: 900 96px Heebo, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-11 {
+    font-size: 40px;
+    white-space: initial;
+  }
+}
+.column-4 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 32%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column-4 {
+    width: 100%;
+  }
+}
+.div-12 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+@media (max-width: 991px) {
+  .div-12 {
+    margin-top: 40px;
+  }
+}
+.div-13 {
+  color: #000;
+  letter-spacing: 1.44px;
+  white-space: nowrap;
+  font: 400 24px Ubuntu, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-13 {
+    white-space: initial;
+  }
+}
+.div-14 {
+  color: #000;
+  margin-top: 37px;
+  white-space: nowrap;
+  font: 900 96px Heebo, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-14 {
+    font-size: 40px;
+    white-space: initial;
+  }
+}
