@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLoadScript } from '@react-google-maps/api';
 
 export const useTransactionDetails = () => {
+    const { isLoaded } = useLoadScript({
+        googleMapsApiKey: 'AIzaSyABR1ooIS5LNeO7dOCAgBc7JnHUF8fT82g',
+    });
+    const [latitude] = useState(45.49717);
+    const [longitude] = useState(-73.57882);
     const [transactionCost] = useState("252,193$");
     const [email] = useState("johnDoe@doe.com");
     const [disabled, setDisabled] = useState(true);
     const [firstName] = useState("John");
     const [lastName] = useState("Doe");
     const [companyName] = useState("JohnDoe Inc.");
-    const [address] = useState("123 Maple Street");
-    const [optionalAddress] = useState("Suite 123");
+    const [address] = useState("Boulevard De Maisonneuve Ouest");
+    const [optionalAddress] = useState("Suite 701");
     const [city] = useState("Montreal");
     const [country] = useState("Canada");
     const [state] = useState("Quebec");
@@ -34,6 +40,9 @@ export const useTransactionDetails = () => {
         phone,
         disabled,
         setDisabled,
-        handleUpdateClick
+        handleUpdateClick,
+        isLoaded,
+        latitude,
+        longitude
     };
 }

@@ -113,3 +113,7 @@ body {
 .transaction-container .button-container .update-button {
     margin-right: auto;
 }
+
+.transaction-container .transaction-summary-container .map {
+    text-align: left;
+}

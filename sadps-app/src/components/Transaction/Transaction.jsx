@@ -4,11 +4,13 @@ import parcel from './stockparcel.png';
 import { useTransactionDetails } from './hooks';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import { GoogleMap, MarkerF } from '@react-google-maps/api';
 
 const Transaction = () => {
     const navigate = useNavigate();
     const { state: { isRefund } } = useLocation();
+    const latitude = isRefund ? 45.587390 : 45.49717;
+    const longitude = isRefund ? -73.633040 : -73.57882;
     const {
         transactionCost, 
         email, 
@@ -23,7 +25,8 @@ const Transaction = () => {
         zipCode,
         phone,
         disabled,
-        handleUpdateClick
+        handleUpdateClick,
+        isLoaded,
     } = useTransactionDetails();
 
     const handleRedirect = () => {
@@ -88,6 +91,16 @@ const Transaction = () => {
                     <div className='final-total-container'>
                         <p>{ isRefund ? "Amount to be refunded: " : "Total Delivery Cost: "} {transactionCost} {isRefund ? " CR" : "" }</p>
                     </div>
+                    <div className='map'>
+                        <p>{isRefund ? "Closest SADPS Dropoff hub location:" : "Delivering to:"}</p>
+                    { isLoaded ? 
+                        <GoogleMap mapContainerClassName={"map-container"} center={{lat: latitude, lng: longitude}} zoom={13}>
+                            <MarkerF position={{lat: latitude, lng: longitude}}/>
+                        </GoogleMap>
+                        :
+                        <p>No map available</p>
+                    }
+                    </div> 
                 </div>
             </div>
         </div>
