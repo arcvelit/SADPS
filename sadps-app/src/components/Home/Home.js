@@ -1,5 +1,8 @@
 import React from 'react';
 import logo from './Style/SADPS-LOGO.png'
+import facebookIcon from './Style/Facebook_icon_2013.png'; // path to your downloaded icon
+import twitterIcon from './Style/Coast_twitter.png';
+import instagramIcon from './Style/Instagram_logo_2022.png';
 import './Style/Home.css'
 function DefaultHome()
 {
@@ -48,7 +51,22 @@ function DefaultHome()
           </div>
         </div>
       </div>
-
+      {/* Footer with Social Media Icons and "Follow Us" label */}
+      <footer className="footer">
+        <div className="socialMediaSection">
+          <span className="followUs">Follow Us</span> {/* Add this line for the "Follow Us" label */}
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src={facebookIcon} alt="Facebook" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src={twitterIcon} alt="Twitter" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src={instagramIcon} alt="Instagram" />
+          </a>
+          {/* ... more icons as needed ... */}
+        </div>
+      </footer>
     </>
   );
 }

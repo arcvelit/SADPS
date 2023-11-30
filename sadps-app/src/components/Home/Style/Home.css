@@ -219,3 +219,33 @@
     white-space: initial;
   }
 }
+
+/* Footer Styling */
+.footer {
+  background-color: rgb(209, 209, 209);
+  text-align: center;
+  padding: 20px;
+}
+
+.footer img {
+  margin: 0 10px;
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* ... existing styles ... */
+
+.socialMediaSection {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* or 'flex-start' to align to the left */
+  /* ... other styles as needed ... */
+}
+
+.followUs {
+  margin-right: 15px; /* Adjust as needed */
+  font-weight: bold;
+  /* ... other styles as needed ... */
+}
+
+/* ... rest of the styles ... */
