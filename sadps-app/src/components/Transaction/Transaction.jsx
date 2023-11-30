@@ -3,8 +3,11 @@ import './Transaction.css';
 import parcel from './stockparcel.png';
 import { useTransactionDetails } from './hooks';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Transaction = () => {
+    const navigate = useNavigate();
     const { state: { isRefund } } = useLocation();
     const {
         transactionCost, 
@@ -23,20 +26,19 @@ const Transaction = () => {
         handleUpdateClick
     } = useTransactionDetails();
 
+    const handleRedirect = () => {
+        navigate("/payment");
+    }
+
     return (
         <div className='transaction-container'>
             <div className='checkout-container'>
                 <div className='contact-info-container'>
-                    <p>SADPS Delivery {isRefund ? "Refund" : "Shipping" } Summary</p>
+                    <p>Transaction Summary</p>
                     <p className='left-align-headers'>Contact Information</p>
                     <div className='input-container'>
                         <input placeholder='Email' defaultValue={email} disabled={disabled}/>
-                        { isRefund ? null :
-                            <div className='email-checkbox'>
-                                <label>Email me with news and offers: </label>
-                                <input type='checkbox'defaultValue="true"/>
-                            </div>
-                        }
+
                     </div>
                     <p className='left-align-headers'>{isRefund ? "Refund" : "Shipping" } Information</p>
                     <div className='checkout-form'>
@@ -67,7 +69,7 @@ const Transaction = () => {
                     </div>
                     <div className='input-container button-container'>
                         <button className='update-button' onClick={handleUpdateClick}>Update Information</button>
-                        <button className='confirm-button'>Confirm</button>
+                        <button onClick={handleRedirect} className='confirm-button'>Confirm</button>
                     </div>
                 </div>
                 <div className='transaction-summary-container'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './Style/MakeDelivery.css'
+import { useNavigate } from 'react-router-dom';
 
 
 function MakeDeliveryRequest()
@@ -37,8 +38,10 @@ function MakeDeliveryRequest()
     }));
  };
 
+ const navigate = useNavigate();
  const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/transaction", {state: {isRefund: false}});
  };
 
  return (
