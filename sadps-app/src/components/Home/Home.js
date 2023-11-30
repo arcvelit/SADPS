@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './Style/SADPS-LOGO.png';
+import Footer from './Footer'; // Import the Footer component
 import './Style/Home.css';
 
 function DefaultHome() {
@@ -10,6 +11,7 @@ function DefaultHome() {
                 <p>Discover SADPS – your trusted postal solution for fast and secure delivery of mail and packages. We specialize in both local and 
                   international shipments, offering real-time tracking and personalized service. Choose SADPS for seamless, reliable, and efficient postal services.</p>
             </div>
+            <Footer /> {/* Add the Footer component here */}
         </div>  
     );
 }
