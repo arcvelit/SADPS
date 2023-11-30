@@ -1,13 +1,21 @@
 .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center the text */
+}
 
-  .home-container img
-  {
-    max-width: 100%;
-    max-height: 100%;
-    display: block; /* Ensure the image is treated as a block element */
-    margin: auto; /* Center the image within its parent */
-  }
+.home-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.company-description p {
+  margin-top: 20px; /* Adjust space between the logo and the text */
+  color: #333; /* Choose a color that fits your design */
+  font-size: 1rem; /* Adjust font size as needed */
+  max-width: 600px; /* Max width for better readability */
+}
