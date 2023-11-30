@@ -45,7 +45,7 @@
   .status-box {
     background-color: #f9f9f9;
     padding: 20px;
-    width: 50%;
+    width: 75%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -55,23 +55,35 @@
   .status-collection {
     display: block;
     flex-direction: column;
+    width: 100%;
   }
   
   .status {
     text-align: left; /* Align text within the status to the left */
     margin-bottom: 10px; /* Add margin between each status item */
+    width: 100%;
   }
   
   /* Additional styling for better presentation */
   .status h3 {
     margin: 0; /* Remove default margin on h3 */
+    width: 100%;
   }
   
   .status p {
     margin: 0; /* Remove default margin on p */
+    width: 100%;
+  }
+
+  .map {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    width: 90%;
   }
 
   .map-container {
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
    }
