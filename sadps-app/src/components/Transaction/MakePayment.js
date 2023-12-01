@@ -9,7 +9,8 @@ const MakePayment = (props) => {
 
   const appController = props.controller;
 
-  console.log(appController);
+  console.log(appController)
+
 
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');

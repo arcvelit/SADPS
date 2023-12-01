@@ -22,13 +22,14 @@ function App() {
       <NavigationBar />
 
       <Routes>
-        <Route path="/get-tracking-updates" Component={GetTrackingUpdates} controller={appController}/>
-        <Route path="/leave-a-review" Component={LeaveAReview}/>
-        <Route path="/make-delivery-request" Component={MakeDeliveryRequest}/>
-        <Route path="/transaction" Component={Transaction}/>
+        <Route path="/get-tracking-updates"   element={<GetTrackingUpdates controller={appController}/>}/>
+        <Route path="/leave-a-review"         element={<LeaveAReview controller={appController}/>}/>
+        <Route path="/make-delivery-request"  element={<MakeDeliveryRequest controller={appController}/>}/>
+        <Route path="/transaction"            element={<Transaction controller={appController}/>}/>
+        <Route path="/customer-support"       element={<ContactSupport controller={appController}/>}/>
+        <Route path="/payment"                element={<MakePayment controller={appController}/>}/>
+
         <Route path="/" Component={Home}/>
-        <Route path="/customer-support" Component={ContactSupport}/>
-        <Route path="/payment" Component={MakePayment}/>
 
       <Route path="*" Component={Error505}/>
 
