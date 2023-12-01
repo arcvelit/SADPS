@@ -10,21 +10,26 @@ import Transaction from './components/Transaction/Transaction';
 import MakePayment from './components/Transaction/MakePayment';
 import Error505 from './components/Home/505';
 import ContactSupport from './components/Support/ContactSupport'
+import AppController from './components/Objects/Controllers/AppController';
 
 
 function App() {
+
+  const appController = new AppController();
+
   return (
     <Router>
       <NavigationBar />
 
       <Routes>
-        <Route path="/get-tracking-updates" Component={GetTrackingUpdates}/>
-        <Route path="/leave-a-review" Component={LeaveAReview}/>
-        <Route path="/make-delivery-request" Component={MakeDeliveryRequest}/>
-        <Route path="/transaction" Component={Transaction}/>
+        <Route path="/get-tracking-updates"   element={<GetTrackingUpdates controller={appController}/>}/>
+        <Route path="/leave-a-review"         element={<LeaveAReview controller={appController}/>}/>
+        <Route path="/make-delivery-request"  element={<MakeDeliveryRequest controller={appController}/>}/>
+        <Route path="/transaction"            element={<Transaction controller={appController}/>}/>
+        <Route path="/customer-support"       element={<ContactSupport controller={appController}/>}/>
+        <Route path="/payment"                element={<MakePayment controller={appController}/>}/>
+
         <Route path="/" Component={Home}/>
-        <Route path="/customer-support" Component={ContactSupport}/>
-        <Route path="/payment" Component={MakePayment}/>
 
       <Route path="*" Component={Error505}/>
 

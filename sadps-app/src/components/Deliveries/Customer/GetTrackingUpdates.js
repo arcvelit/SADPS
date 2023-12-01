@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import './Style/Tracking.css'
 
-function GetTrackingUpdates()
+function GetTrackingUpdates(props)
 {
+
+  const appController = props.controller;
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: 'AIzaSyABR1ooIS5LNeO7dOCAgBc7JnHUF8fT82g',
@@ -18,16 +20,14 @@ function GetTrackingUpdates()
 const [transitStatus, setTransitStatus] = useState('');
 const [deliveryDate, setDeliveryDate] = useState('');
   
-  const mockData = [
-    { trackingNumber: 'SADPS-123', status: 'Delivered', location: 'New York, NY', lat: 40.74843, lng: -73.98565, pickupDate: '2022-02-15', transitStatus: '2022-02-16', deliveryDate: '2022-02-20' },
-    { trackingNumber: 'SADPS-456', status: 'In Transit', location: 'Montreal, QC', lat: 45.49717, lng: -73.57882, pickupDate: '2019-02-15', transitStatus: 'Expected arrival on 2019-02-16', deliveryDate: 'Expected delivery on 2019-02-20' },
-    { trackingNumber: 'SADPS-789', status: 'Delivered', location: 'Chicago, IL', lat: 41.87887, lng: -87.63591, pickupDate: '2023-11-15', transitStatus: '2023-11-16', deliveryDate: '2023-12-20' },
-    { trackingNumber: 'SADPS-450', status: 'Delivered', location: 'Laval, QC', lat: 45.57146, lng: -73.75439 , pickupDate: '2023-02-15', transitStatus: '2023-02-16', deliveryDate: '2023-02-20'},
-  ];
+  const data = appController.getTrackingSessions();
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    const trackingInfo = mockData.find(item => item.trackingNumber === trackingNumber);
+    
+    appController.fetchTrackingInfo();
+
+    const trackingInfo = data.find(item => item.trackingNumber === trackingNumber);
     if (trackingInfo) {
       setStatus(trackingInfo.status);
       setLocation(trackingInfo.location);

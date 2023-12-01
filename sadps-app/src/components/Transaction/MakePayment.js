@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import './Style/Payment.css';
 import logo from '../Home/Style/SADPS-LOGO-so-smoll.png';
 import Modal from 'react-modal'; // Import the Modal component
+import {CreditStrategy, CryptoStrategy, PaypalStrategy} from '../Objects/PaymentStrategies';
 
 
-const MakePayment = () => {
+const MakePayment = (props) => {
+
+  const appController = props.controller;
+
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvc, setCvc] = useState('');
@@ -26,27 +30,29 @@ const MakePayment = () => {
 
   const closeModal = () => {
     setModalOpen(false);
-
   }
 
-  const handleCrypto = () => {
+  const handleCryptoButton = () => {
     setCryptoProcessing(true);
+    appController.setPaymentStrategy(new CryptoStrategy());
     handlePayment();
   }
 
-  const handlePaypal = () => {
+  const handlePaypalButton = () => {
     setPaypalProcessing(true);
+    appController.setPaymentStrategy(new PaypalStrategy());
     handlePayment();
   }
 
   const handlePayment = async () => {
     // Simulate a payment processing delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    appController.paymentManager.execute();
     // open modal
     setModalOpen(true);
     setPaypalProcessing(false);
     setCryptoProcessing(false);
     setProcessing(false);
+
 
   };
 
@@ -81,13 +87,13 @@ const MakePayment = () => {
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               <div className='payment-btn-container'>
-              <button onClick={handleConfirm} disabled={isProcessing}>
+              <button onClick={handleConfirm}>
               {isProcessing ? 'Processing...' : 'Make Payment'}
               </button>
-              <button onClick={handlePaypal} className='paypal-button'>
+              <button onClick={handlePaypalButton} className='paypal-button'>
               {paypalProcessing ? 'Redirecting...' : 'Checkout with PayPal'}
               </button>
-              <button onClick={handleCrypto} className='crypto-button'>
+              <button onClick={handleCryptoButton} className='crypto-button'>
               {cryptoProcessing ? 'Redirecting...' : 'Access crypto wallet'}
               </button>
               </div>
