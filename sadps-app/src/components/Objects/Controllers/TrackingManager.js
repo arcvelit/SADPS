@@ -1,4 +1,6 @@
-class TrackingManager extends AbstractManager {
+import AbstractManager from './AbstractManager';
+
+export default class TrackingManager extends AbstractManager {
 
     execute() {
 

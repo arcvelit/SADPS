@@ -1,4 +1,6 @@
-class QuotationManager extends AbstractManager {
+import AbstractManager from './AbstractManager';
+
+export default class QuotationManager extends AbstractManager {
 
     execute() {
         

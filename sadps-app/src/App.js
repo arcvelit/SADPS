@@ -10,15 +10,19 @@ import Transaction from './components/Transaction/Transaction';
 import MakePayment from './components/Transaction/MakePayment';
 import Error505 from './components/Home/505';
 import ContactSupport from './components/Support/ContactSupport'
+import AppController from './components/Objects/Controllers/AppController';
 
 
 function App() {
+
+  const appController = new AppController();
+
   return (
     <Router>
       <NavigationBar />
 
       <Routes>
-        <Route path="/get-tracking-updates" Component={GetTrackingUpdates}/>
+        <Route path="/get-tracking-updates" Component={GetTrackingUpdates} controller={appController}/>
         <Route path="/leave-a-review" Component={LeaveAReview}/>
         <Route path="/make-delivery-request" Component={MakeDeliveryRequest}/>
         <Route path="/transaction" Component={Transaction}/>

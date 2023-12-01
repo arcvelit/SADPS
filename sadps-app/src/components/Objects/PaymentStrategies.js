@@ -22,7 +22,7 @@ export class CryptoStrategy extends PaymentStrategy {
 
 }
 
-export class CreditStrategy extends PaymentStrategy {
+export  class CreditStrategy extends PaymentStrategy {
 
     async makeRemoteTransaction() {
         await new Promise(resolve => setTimeout(resolve, 2000));

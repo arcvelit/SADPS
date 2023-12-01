@@ -105,7 +105,6 @@ function LeaveAReview()
       <div className='recent-reviews'>
         { 
           testimonials.map((testimonial, i) => {
-            console.log(22222)
             return <div className={`${i % 2 === 0 ? 'review' : 'alt-review'}`}>
               <p className='review-text'><em>{testimonial.comment}</em></p>
               <p className='reviewer'>{testimonial.name}, {testimonial.city}</p>

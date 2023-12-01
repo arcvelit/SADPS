@@ -1,4 +1,6 @@
-class SupportManager extends AbstractManager {
+import AbstractManager from './AbstractManager';
+
+export default class SupportManager extends AbstractManager {
 
     execute() {
         

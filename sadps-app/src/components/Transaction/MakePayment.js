@@ -5,7 +5,12 @@ import Modal from 'react-modal'; // Import the Modal component
 import {CreditStrategy, CryptoStrategy, PaypalStrategy} from '../Objects/PaymentStrategies';
 
 
-const MakePayment = () => {
+const MakePayment = (props) => {
+
+  const appController = props.controller;
+
+  appController.makePayment();
+
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvc, setCvc] = useState('');

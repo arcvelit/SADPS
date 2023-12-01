@@ -1,3 +1,10 @@
+import OrderManager from './OrderManager';
+import PaymentManager from './PaymentManager';
+import QuotationManager from './QuotationManager';
+import ReviewManager from './ReviewManager';
+import SupportManager from './SupportManager';
+import TrackingManager from './TrackingManager';
+
 class AppController {
 
     constructor() {
@@ -7,6 +14,10 @@ class AppController {
         this.reviewManager = new ReviewManager();
         this.supportManager =  new SupportManager();
         this.trackingManager = new TrackingManager();
+    }
+
+    makePayment() {
+        console.log("DWEEEEEEEEEE")
     }
 
 }

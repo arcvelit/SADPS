@@ -1,4 +1,6 @@
-class ReviewManager extends AbstractManager {
+import AbstractManager from './AbstractManager';
+
+export default class ReviewManager extends AbstractManager {
 
     execute() {
         

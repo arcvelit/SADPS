@@ -1,8 +1,10 @@
-import CreditStrategy from '../PaymentStrategies'
+import { CreditStrategy } from '../PaymentStrategies'
+import AbstractManager from './AbstractManager';
 
-class PaymentManager extends AbstractManager {
+export default class PaymentManager extends AbstractManager {
 
     constructor(strategy = null) {
+        super();
         if (strategy === null)
             this.strategy = new CreditStrategy();
         this.strategy = strategy;
