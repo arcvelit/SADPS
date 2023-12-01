@@ -53,6 +53,14 @@ class AppController {
         this.quotationManager.execute();
     }
 
+    fetchTrackingInfo() {
+        this.trackingManager.execute();
+    }
+
+    getTrackingSessions() {
+        return this.trackingManager.sessions;
+    }
+
 }
 
 
