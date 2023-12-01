@@ -18,7 +18,7 @@ class AppController {
     }
 
     makePayment() {
-        alert(1);
+        this.paymentManager.execute();
     }
 
 }

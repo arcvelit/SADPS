@@ -9,9 +9,6 @@ const MakePayment = (props) => {
 
   const appController = props.controller;
 
-  console.log(appController)
-
-
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvc, setCvc] = useState('');
@@ -33,27 +30,30 @@ const MakePayment = (props) => {
 
   const closeModal = () => {
     setModalOpen(false);
-
   }
 
-  const handleCrypto = () => {
+  const handleCryptoButton = () => {
     setCryptoProcessing(true);
+    appController.paymentManager.setStrategy(new CryptoStrategy());
     handlePayment();
   }
 
-  const handlePaypal = () => {
+  const handlePaypalButton = () => {
     setPaypalProcessing(true);
+    appController.paymentManager.setStrategy(new PaypalStrategy());
     handlePayment();
   }
 
   const handlePayment = async () => {
     // Simulate a payment processing delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    appController.paymentManager.execute();
     // open modal
     setModalOpen(true);
     setPaypalProcessing(false);
     setCryptoProcessing(false);
     setProcessing(false);
+
+    console.log(appController.paymentManager)
 
   };
 
@@ -88,13 +88,13 @@ const MakePayment = (props) => {
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               <div className='payment-btn-container'>
-              <button onClick={handleConfirm} disabled={isProcessing}>
+              <button onClick={handleConfirm}>
               {isProcessing ? 'Processing...' : 'Make Payment'}
               </button>
-              <button onClick={handlePaypal} className='paypal-button'>
+              <button onClick={handlePaypalButton} className='paypal-button'>
               {paypalProcessing ? 'Redirecting...' : 'Checkout with PayPal'}
               </button>
-              <button onClick={handleCrypto} className='crypto-button'>
+              <button onClick={handleCryptoButton} className='crypto-button'>
               {cryptoProcessing ? 'Redirecting...' : 'Access crypto wallet'}
               </button>
               </div>
