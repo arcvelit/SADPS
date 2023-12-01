@@ -5,8 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #99d5fd;
   }
-
+.div{
+  background-color: #99d5fd;
+}
+  .body{
+    background-color: #99d5fd;
+  }
   .tracking-form {
     width: 75%;
     background-color: #f9f9f9;
