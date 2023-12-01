@@ -49,6 +49,10 @@ class AppController {
         this.orderManager.execute();
     }
 
+    recordQuotation() {
+        this.quotationManager.execute();
+    }
+
 }
 
 

@@ -6,7 +6,10 @@ import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { GoogleMap, MarkerF } from '@react-google-maps/api';
 
-const Transaction = () => {
+const Transaction = (props) => {
+
+    const appController = props.controller;
+
     const navigate = useNavigate();
     const { state: { isRefund } } = useLocation();
     const latitude = isRefund ? 45.587390 : 45.49717;
@@ -30,6 +33,7 @@ const Transaction = () => {
     } = useTransactionDetails();
 
     const handleRedirect = () => {
+        appController.recordQuotation();
         navigate("/payment");
     }
 
