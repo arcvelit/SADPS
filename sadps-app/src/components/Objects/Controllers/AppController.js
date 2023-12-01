@@ -8,6 +8,7 @@ import TrackingManager from './TrackingManager';
 class AppController {
 
     constructor() {
+        this.material = 1;
         this.orderManager = new OrderManager();
         this.paymentManager = new PaymentManager();
         this.quotationManager = new QuotationManager();
@@ -17,9 +18,10 @@ class AppController {
     }
 
     makePayment() {
-        console.log("DWEEEEEEEEEE")
+        alert(1);
     }
 
 }
+
 
 export default AppController;

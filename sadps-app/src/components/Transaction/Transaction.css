@@ -17,7 +17,10 @@ body {
     flex-direction: row;
     justify-content: center;
     height: 100%;
+
 }
+
+
 
 .transaction-container .contact-info-container {
     width: 50%;
@@ -25,6 +28,7 @@ body {
     padding-right: 2rem;
     padding-top: 2rem;
     border-right: 1px solid rgb(124, 118, 118);
+
 }
 
 .transaction-container .contact-info-container .left-align-headers {
@@ -60,7 +64,7 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
-    background-color: whitesmoke;
+    
 }
 
 .transaction-container .checkout-container .checkout-form .row-inputs {
