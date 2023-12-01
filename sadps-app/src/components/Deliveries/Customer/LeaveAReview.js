@@ -41,52 +41,12 @@ function LeaveAReview()
     {
       name: "Grace Chen",
       city: "San Francisco",
-      comment: "SADPS has made my online shopping experience much better. Quick deliveries and excellent communication. I appreciate the dedication to customer satisfaction!"
+      comment: "SADPS is a game-changer in the delivery industry. The speed, accuracy, and professionalism are unmatched. I wouldn't choose any other postal service. Well done!"
     },
     {
       name: "Henry Turner",
       city: "Atlanta",
       comment: "Impressed with SADPS's commitment to environmental sustainability. Their eco-friendly packaging and green initiatives align with my values. Great service with a conscience!"
-    },
-    {
-      name: "Isabel Rodriguez",
-      city: "Dallas",
-      comment: "SADPS has earned my trust with their consistent, reliable service. I can always rely on them to deliver my packages securely and on time. Highly recommended!"
-    },
-    {
-      name: "Jack Thompson",
-      city: "Denver",
-      comment: "SADPS is a game-changer in the delivery industry. The speed, accuracy, and professionalism are unmatched. I wouldn't choose any other postal service. Well done!"
-    },
-    {
-      name: "Olivia Tremblay",
-      city: "Montreal",
-      comment: "SADPS has been a reliable partner for my business. Quick deliveries and a seamless tracking system. I appreciate the convenience they bring to my shipping needs."
-    },
-    {
-      name: "Ethan Singh",
-      city: "Toronto",
-      comment: "Living in a bustling city like Toronto, I need a delivery service I can count on. SADPS has consistently delivered my packages on time, making my life much easier."
-    },
-    {
-      name: "Sophie Chen",
-      city: "Vancouver",
-      comment: "As a frequent online shopper, SADPS has become my go-to for shipping. The rates are reasonable, and the parcels arrive in perfect condition. Vancouver loves SADPS!"
-    },
-    {
-      name: "Liam MacKenzie",
-      city: "Calgary",
-      comment: "SADPS provides a level of service that sets them apart. Courteous staff and a commitment to timely deliveries make them the best choice for anyone in Calgary. Highly recommended!"
-    },
-    {
-      name: "Nathan Tremblay",
-      city: "Quebec City",
-      comment: "SADPS has proven to be the perfect choice for shipping to Quebec City. The packages always arrive in pristine condition, and the delivery times are impressive. A reliable service indeed!"
-    },
-    {
-      name: "Zoe Li",
-      city: "Edmonton",
-      comment: "Living in Edmonton, it's crucial to have a delivery service that can handle the diverse weather conditions. SADPS has consistently delivered, rain or shine. I'm a happy and loyal customer!"
     }
   ];
 
@@ -145,6 +105,7 @@ function LeaveAReview()
       <div className='recent-reviews'>
         { 
           testimonials.map((testimonial, i) => {
+            console.log(22222)
             return <div className={`${i % 2 === 0 ? 'review' : 'alt-review'}`}>
               <p className='review-text'><em>{testimonial.comment}</em></p>
               <p className='reviewer'>{testimonial.name}, {testimonial.city}</p>

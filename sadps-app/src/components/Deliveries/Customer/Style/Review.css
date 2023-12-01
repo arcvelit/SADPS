@@ -7,17 +7,25 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     background-color: #99d5fd;
+    padding-bottom: 0px;
+
   }
     
   .review-form-container {
     background-color: #fff;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin-left: 1em;
+    margin-top: 0;
+    padding-top: 0;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    height: 100%;
   }
 
   .review-form {
@@ -26,14 +34,22 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin-left: 1em;
+    padding-bottom: 0;
+
+
+  }
+
+  h3 {
+    font-size: 1em;
   }
   
-  label {
+  .review-container label {
     display: block;
     margin-bottom: 10px;
+    font-size: 13px;
   }
   
-  input,
+  .review-container input,
   textarea {
     width: 100%;
     padding: 8px;
@@ -41,26 +57,32 @@
     margin-bottom: 10px;
   }
   
-  button {
+  .review-container button {
     background-color: #3498db;
     color: #fff;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer;    
+    transform: translateY(-10px)
   }
   
-  button:hover {
+  .review-container button:hover {
     background-color: #2980b9;
   }
 
   .review-container .recent-reviews {
-    margin-left: 2em;
+    margin-left: 1em;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    row-gap: 1.5em;
-    column-gap: 1.5em;
+    grid-template-rows: auto;
+    grid-template-columns: 200px 200px 200px 200px;
+    row-gap: 1em;
+    column-gap: 1em;
     padding: 2em;
+    margin-top: 0;
+
+    padding-bottom: 29px;
+
   }
 
   .review-container .recent-reviews .review {
@@ -69,6 +91,8 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
+    padding-top: 5px;
+    padding-bottom: 0px;
   }
 
   .review-container .recent-reviews .alt-review {
@@ -77,6 +101,10 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
+    padding-top: 5px;
+    padding-bottom: 0px;
+
+
   }
 
   .review-container .recent-reviews .review-text {
@@ -86,3 +114,15 @@
   .review-container .recent-reviews .reviewer {
     text-align: left;
   }
+
+  .recent-reviews .review,
+.recent-reviews .alt-review {
+  background-color: #dddcdc;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  min-width: auto; /* Adjust the sizing */
+  min-height: auto; /* Adjust the sizing */
+
+
+}
