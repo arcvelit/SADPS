@@ -21,6 +21,10 @@ class AppController {
         this.paymentManager.execute();
     }
 
+    setPaymentStrategy(strategy) {
+        this.paymentManager.strategy = strategy;
+    }
+
     sendReview() {
         this.reviewManager.execute();
     }

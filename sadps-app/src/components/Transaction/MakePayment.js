@@ -34,13 +34,13 @@ const MakePayment = (props) => {
 
   const handleCryptoButton = () => {
     setCryptoProcessing(true);
-    appController.paymentManager.setStrategy(new CryptoStrategy());
+    appController.setPaymentStrategy(new CryptoStrategy());
     handlePayment();
   }
 
   const handlePaypalButton = () => {
     setPaypalProcessing(true);
-    appController.paymentManager.setStrategy(new PaypalStrategy());
+    appController.setPaymentStrategy(new PaypalStrategy());
     handlePayment();
   }
 
@@ -53,7 +53,6 @@ const MakePayment = (props) => {
     setCryptoProcessing(false);
     setProcessing(false);
 
-    console.log(appController.paymentManager)
 
   };
 
