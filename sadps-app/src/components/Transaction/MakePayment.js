@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Style/Payment.css';
 import logo from '../Home/Style/SADPS-LOGO-so-smoll.png';
 import Modal from 'react-modal'; // Import the Modal component
+import {CreditStrategy, CryptoStrategy, PaypalStrategy} from '../Objects/PaymentStrategies';
 
 
 const MakePayment = () => {

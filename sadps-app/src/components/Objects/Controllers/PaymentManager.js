@@ -1,4 +1,4 @@
-import CreditStrategy from '../PaymentStrategies/CreditStrategy'
+import CreditStrategy from '../PaymentStrategies'
 
 class PaymentManager extends AbstractManager {
 

@@ -9,7 +9,6 @@ class AppController {
         this.trackingManager = new TrackingManager();
     }
 
-    
 }
 
 export default AppController;
