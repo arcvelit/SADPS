@@ -1,18 +1,31 @@
+* {
+  font-family: 'Fira Sans';
+}
+
 .review-container {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: #99d5fd;
   }
     
+  .review-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-left: 1em;
+  }
+
   .review-form {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-left: 1em;
   }
   
   label {
@@ -39,4 +52,37 @@
   
   button:hover {
     background-color: #2980b9;
+  }
+
+  .review-container .recent-reviews {
+    margin-left: 2em;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    row-gap: 1.5em;
+    column-gap: 1.5em;
+    padding: 2em;
+  }
+
+  .review-container .recent-reviews .review {
+    background-color: #dddcdc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .review-container .recent-reviews .alt-review {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .review-container .recent-reviews .review-text {
+    text-align: center;
+  }
+
+  .review-container .recent-reviews .reviewer {
+    text-align: left;
   }
