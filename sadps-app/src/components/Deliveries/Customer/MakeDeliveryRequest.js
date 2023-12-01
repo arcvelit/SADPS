@@ -4,8 +4,12 @@ import './Style/MakeDelivery.css'
 import { useNavigate } from 'react-router-dom';
 
 
-function MakeDeliveryRequest()
+function MakeDeliveryRequest(props)
  {
+
+  const appController = props.controller;
+
+
  const [pickup, setPickup] = useState({
     name: '',
     address: '',
@@ -41,6 +45,8 @@ function MakeDeliveryRequest()
  const navigate = useNavigate();
  const handleSubmit = (e) => {
     e.preventDefault();
+    
+    appController.sendOrder();
     navigate("/transaction", {state: {isRefund: false}});
  };
 

@@ -45,6 +45,10 @@ class AppController {
         this.supportManager.execute();
     }
 
+    sendOrder() {
+        this.orderManager.execute();
+    }
+
 }
 
 
