@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useLoadScript } from '@react-google-maps/api';
 
 export const useTransactionDetails = () => {
