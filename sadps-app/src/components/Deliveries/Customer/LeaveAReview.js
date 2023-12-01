@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Style/Review.css'
 
-function LeaveAReview()
+function LeaveAReview(props)
 {
+  const appController = props.controller;
+
   const [email, setEmail] = useState('');
   const [title, setTitle] = useState('');
   const [review, setReview] = useState('');
@@ -53,7 +55,7 @@ function LeaveAReview()
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic here to handle the form submission, e.g., sending data to a server
-    console.log('Form submitted:', { email, title, review, deliveryNumber });
+    appController.sendReview();
   };
 
   return (
@@ -99,7 +101,7 @@ function LeaveAReview()
             />
           </label>
           <br />
-          <button type="submit">Submit Review</button>
+          <button onClick={handleSubmit} type="submit">Submit Review</button>
         </form>
       </div>
       <div className='recent-reviews'>
