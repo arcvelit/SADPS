@@ -5,7 +5,7 @@ export default class PaymentManager extends AbstractManager {
 
     constructor() {
         super();
-        this.strategy = new CreditStrategy();;
+        this.strategy = new CreditStrategy();
     }
 
     setStrategy(strategy) { this.strategy = strategy; }
